@@ -32,7 +32,7 @@ php artisan vendor:publish --tag=paystar-ipg
     <?php
     use PayStar\Ipg\Facades\PayStarIpg;
     
-    PayStar::amount('AMOUNT') // *
+    PayStarIpg::amount('AMOUNT') // *
         ->orderId('ORDER_ID') // *
         ->callbackUrl('CALLBACK_URL') // If You don't use this method, we set this from config
         ->sign('SIGN') // If You don't use this method, we generate auto a sign
@@ -55,7 +55,7 @@ php artisan vendor:publish --tag=paystar-ipg
     <?php
     use PayStar\Ipg\Facades\PayStarIpg;
     
-  PayStar::amount('AMOUNT') // *
+  PayStarIpg::amount('AMOUNT') // *
         ->orderId('ORDER_ID') // *
         ->callbackUrl('CALLBACK_URL') // If You don't use this method, we set this from config
         ->sign('SIGN') // If You don't use this method, we generate auto a sign
@@ -77,7 +77,7 @@ php artisan vendor:publish --tag=paystar-ipg
     <?php
     use PayStar\Ipg\Facades\PayStarIpg;
     
-    PayStar::amount('AMOUNT')
+    PayStarIpg::amount('AMOUNT')
         ->refNum('REF_NUM')
         ->sign('SIGN')
         ->verify();
@@ -88,7 +88,7 @@ php artisan vendor:publish --tag=paystar-ipg
     <?php
     use PayStar\Ipg\Facades\PayStarIpg;
     // Redirect to Gateway
-    PayStar::token('AMOUNT')->payment();
+    PayStarIpg::token('AMOUNT')->payment();
     ```
 
 -----------
