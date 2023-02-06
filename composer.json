@@ -1,0 +1,46 @@
+{
+    "name": "paystar/laravel-ipg",
+    "type": "library",
+    "description": "A package for PayStar payment gateway and Those for whom time is important",
+    "keywords": [
+        "pay star",
+        "ipg",
+        "paystar ipg",
+        "bank gateway",
+        "iranian bank",
+        "bank",
+        "payment",
+        "online pay",
+        "pay",
+        "fast pay",
+        "fast payment"
+    ],
+    "homepage": "https://github.com/imvahid/paystar-ipg",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vahid Ashourzadeh",
+            "email": "v.ashourzdeh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "7.*|8.*",
+        "laravel/framework": "7.*|8.*|9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PayStar\\Ipg\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PayStar\\Ipg\\PayStarIpgServiceProvider"
+            ],
+            "aliases": {
+                "PayStarIpg" : "PayStar\\Ipg\\Facades\\PayStarIpg"
+            }
+        }
+    }
+}
