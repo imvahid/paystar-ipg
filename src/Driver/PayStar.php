@@ -9,6 +9,7 @@ use PayStar\Ipg\Facades\Encryption;
 class PayStar
 {
     private $createUrl = 'https://core.paystar.ir/api/pardakht/create';
+
     private $paymentUrl = 'https://core.paystar.ir/api/pardakht/payment';
 
     private $verifyUrl = 'https://core.paystar.ir/api/pardakht/verify';
@@ -18,10 +19,10 @@ class PayStar
         try {
             // amount#order_id#callback
             $parameters = [
-                'amount'       => $amount,
-                'orderId'      => $orderId,
-                'callback_url' => $callbackUrl ?? config('paystar-ipg.callback_url'),
-                'sign'         => $sign ?? Encryption::sign($amount, $orderId, $callbackUrl),
+                'amount'   => $amount,
+                'order_id' => $orderId,
+                'callback' => $callbackUrl ?? config('paystar-ipg.callback_url'),
+                'sign'     => $sign ?? Encryption::sign($amount, $orderId, $callbackUrl),
             ];
 
             if (isset($option['name']))
@@ -43,7 +44,7 @@ class PayStar
 
             $response = Http::withHeaders([
                 'Content-Type'  => 'application/json',
-                'Authorization' => 'Bearer' . config('paystar-ipg.gateway_id')
+                'Authorization' => 'Bearer ' . config('paystar-ipg.gateway_id')
             ])->post($this->createUrl, $parameters);
 
             return $response;
@@ -66,14 +67,14 @@ class PayStar
     {
         try {
             $parameters = [
-                'refNum' => $refNum,
-                'amount' => $amount,
-                'sign'   => $sign,
+                'ref_num' => $refNum,
+                'amount'  => $amount,
+                'sign'    => $sign,
             ];
 
             $response = Http::withHeaders([
                 'Content-Type'  => 'application/json',
-                'Authorization' => 'Bearer' . config('paystar-ipg.gateway_id')
+                'Authorization' => 'Bearer ' . config('paystar-ipg.gateway_id')
             ])->post($this->verifyUrl, $parameters);
 
             return $response;
