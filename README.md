@@ -88,7 +88,7 @@ php artisan vendor:publish --tag=paystar-ipg
     <?php
     use PayStar\Ipg\Facades\PayStarIpg;
     // Redirect to Gateway
-    PayStarIpg::token('AMOUNT')->payment();
+    PayStarIpg::token('TOKEN')->payment();
     ```
 
 -----------
