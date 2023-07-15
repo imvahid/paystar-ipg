@@ -27,10 +27,14 @@ composer require paystar/laravel-ipg
 php artisan vendor:publish --tag=paystar-ipg
 ```
 
+--------------------------
+
 ### :book: List of available methods
 - <code>create()</code>: return a token
 - <code>payment()</code>: auto redirect to gateway
 - <code>verify()</code>: verify transaction
+
+--------------------------
 
 ### :heavy_check_mark: How to use exists methods and options
 
@@ -98,7 +102,7 @@ php artisan vendor:publish --tag=paystar-ipg
     PayStarIpg::token('TOKEN')->payment();
     ```
 
------------
+--------------------------
 
 ### #️⃣ How to generate <code>sign</code>
 ```php
@@ -113,7 +117,7 @@ Encryption::algos(); // Show list of hash Algorithms (hash_algos() method)
 Encryption::hash($algo, $string, $key, $binary); // use hash_hmac() method
 ```
   
---------------------
+--------------------------
 
 ### :man_technologist: Author
 
