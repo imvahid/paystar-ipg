@@ -1,14 +1,21 @@
-# Laravel Package For [PayStar](https://paystar.ir/)
+<p align="center"><a href="https://paystar.ir" target="_blank"><img src="https://paystar.ir/homepage/image/logo.svg" width="170" alt="PayStar Logo"></a></p>
+
+<p align="center">This is a Laravel package for PayStar payment gateway.</p>
+
+<div align="center">
+    
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/paystar/laravel-ipg.svg?style=flat-square)](https://packagist.org/packages/paystar/laravel-ipg)
 [![GitHub issues](https://img.shields.io/github/issues/imvahid/paystar-ipg?style=flat-square)](https://github.com/imvahid/paystar-ipg/issues)
 [![GitHub stars](https://img.shields.io/github/stars/imvahid/paystar-ipg?style=flat-square)](https://github.com/imvahid/paystar-ipg/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/imvahid/paystar-ipg?style=flat-square)](https://github.com/imvahid/paystar-ipg/network)
 [![Total Downloads](https://img.shields.io/packagist/dt/paystar/laravel-ipg.svg?style=flat-square)](https://packagist.org/packages/paystar/laravel-ipg)
 [![GitHub license](https://img.shields.io/github/license/imvahid/paystar-ipg?style=flat-square)](https://github.com/imvahid/paystar-ipg/blob/master/LICENSE)
+    
+</div>
 
-#### This is a Laravel Package for PayStar payment gateway.
+--------------------------
 
-## <g-emoji class="g-emoji" alias="arrow_down" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b07.png">⬇️</g-emoji> How to install and config [paystar/laravel-ipg](https://github.com/imvahid/paystar-ipg) package?
+### :arrow_down: Installation guide
 
 #### Install package
 ```bash
@@ -20,12 +27,12 @@ composer require paystar/laravel-ipg
 php artisan vendor:publish --tag=paystar-ipg
 ```
 
-## <g-emoji class="g-emoji" alias="gem" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f48e.png">💎</g-emoji> List of available methods
+### :book: List of available methods
 - <code>create()</code>: return a token
 - <code>payment()</code>: auto redirect to gateway
 - <code>verify()</code>: verify transaction
 
-## <g-emoji class="g-emoji" alias="book" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png">📖</g-emoji> How to use exists methods and options
+### :heavy_check_mark: How to use exists methods and options
 
 - #### Use <code>create()</code> method
     ```php
@@ -93,7 +100,7 @@ php artisan vendor:publish --tag=paystar-ipg
 
 -----------
 
-#### How to generate <code>sign</code>
+### #️⃣ How to generate <code>sign</code>
 ```php
 <?php
 use PayStar\Ipg\Facades\Encryption;
@@ -106,4 +113,9 @@ Encryption::algos(); // Show list of hash Algorithms (hash_algos() method)
 Encryption::hash($algo, $string, $key, $binary); // use hash_hmac() method
 ```
   
-#### Built with :heart: for laravel developers.
+--------------------
+
+### :man_technologist: Author
+
+- [Github](https://github.com/imvahid)
+- [linkedin](https://www.linkedin.com/in/imvahid)
